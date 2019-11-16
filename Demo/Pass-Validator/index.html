@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 "> 
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css?family=Aleo|Slabo+27px" rel="stylesheet">
+             
+        <title>Password validator</title>
+        <style type="text/css" media="screen">
+        	body {
+			    margin:0; padding:3px;
+			    box-sizing:border-box;
+			    user-select:none;
+			    font-family: 'Aleo', serif;
+			}
+			#set
+			{
+			    display:block ;
+			    position:relative;
+			    margin:auto;
+			}
+			#count
+			{
+			   display:inline-block;
+			   position:relative ;
+			   margin:4%; margin-bottom:2%;
+			   color:#000; font-size:18px;
+			   text-indent:40px;
+			   font-weight:bolder;
+			   
+			}
+
+			#see
+			{
+			    display:inline-block ;
+			    color:gray;
+			    margin:auto; float:right;
+			    margin-right:40px;
+			    margin-top:10px;
+			    cursor:pointer;
+			    transition-duration:0.2s;
+			}
+
+			input[id='password']
+			{
+			    border:none; width:80%;
+			    outline:none;
+			    border-bottom:5px solid #efefef;
+			    display:block; 
+			    position:relative;
+			    font-size:27px;
+			    text-align:center;
+			    top:50px;
+			    margin-left:35px;
+			    margin-bottom:40px;
+			    user-select:auto;
+			    font-family: 'Slabo 27px', serif;
+			    transition-duration:600ms;
+			}
+
+			i
+			{
+			    font-size:23px;
+			    transition-duration:600ms;    
+			}
+
+			#check0,#check1,#check2,#check3,#check4
+			{
+			   display:block;
+			   position:relative;
+			   margin:4%;
+			   color:tomato; font-size:18px;
+			   width:92%  ;
+			   
+			}
+
+			span
+			{
+			    margin:10px;
+			}
+
+			input:hover
+			{
+			    border-bottom:5px solid #3498db;
+			}
+        </style>
+    </head>
+    <body>
+    
+     <input type="password" id="password" placeholder="Enter password"
+     onInput="check()"/>
+    
+    <br>
+       
+      <div id="set" >
+        
+     <div id="count">Length : 0</div>
+         
+     <i id="see" onclick="see()" class="far fa-eye"></i>
+          
+      </div>
+       
+    <div id="check0">
+      <i class="far fa-check-circle"></i>  <span> Length more than 5.</span>
+    </div>
+     <div id="check1">
+      <i class="far fa-check-circle"></i>  <span> Length less than 10.</span>
+    </div>
+     <div id="check2">
+      <i class="far fa-check-circle"></i>  <span> Contains numerical character.</span>
+    </div>
+     <div id="check3">
+      <i class="far fa-check-circle"></i>   <span>Contains special character.</span>
+      </div>
+       <div id="check4">
+      <i class="far fa-check-circle"></i>  <span>Shouldn't contain spaces.</span>
+    </div>
+     <script type="text/javascript">
+     	var is_visible = false ;
+
+		function see(){
+		    var input = document.getElementById("password");
+		    var see = document.getElementById("see");
+		    
+		    if(is_visible)
+		    {
+		        input.type = 'password';
+		        is_visible = false; 
+		        see.style.color='#ddd';
+		    }
+		    else
+		    {
+		        input.type = 'text';
+		        is_visible = true; 
+		        see.style.color='#10ff01';
+		    }
+		    
+		}
+
+		function check()
+		{
+		    var input = document.getElementById("password").value;
+		    
+		input=input.trim();
+		document.getElementById("password").value=input;
+		    document.getElementById("count").innerText="Length : " + input.length;
+		    if(input.length>=5)
+		    {
+		        document.getElementById("check0").style.color="green";
+		    }
+		    else
+		    {
+		       document.getElementById("check0").style.color="tomato"; 
+		    }
+		    
+		    if(input.length<=10)
+		    {
+		        document.getElementById("check1").style.color="green";
+		    }
+		    else
+		    {
+		       document.getElementById("check1").style.color="tomato"; 
+		    }
+		    
+		    if(input.match(/[0-9]/i))
+		    {
+		        document.getElementById("check2").style.color="green";
+		    }
+		    else
+		    {
+		       document.getElementById("check2").style.color="tomato"; 
+		    }
+		    
+		    if(input.match(/[^A-Za-z0-9-' ']/i))
+		    {
+		        document.getElementById("check3").style.color="green";
+		    }
+		    else
+		    {
+		       document.getElementById("check3").style.color="tomato"; 
+		    }
+		    
+		    if(input.match(' '))
+		    {
+		        document.getElementById("check4").style.color="tomato";
+		    }
+		    else
+		    {
+		       document.getElementById("check4").style.color="green"; 
+		    }
+		    
+		}
+
+
+     </script>
+   
+    </body>
+</html>
