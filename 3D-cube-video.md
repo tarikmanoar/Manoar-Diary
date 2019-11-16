@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<p align='center'>## 3D CUBE VIDEO</p>
-=======
+
 <h1 align='center'>3D CUBE VIDEO</h1>
 
 
@@ -102,4 +100,4 @@ section{
  	transform: rotateX(90deg) translate3d(0, 0, 200px)
  }
  ```
->>>>>>> 4558601be9c06362547193540d7b548e83f7142e
+
