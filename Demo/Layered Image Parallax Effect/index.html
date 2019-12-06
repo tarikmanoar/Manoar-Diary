@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Layered Image Parallax Effect by Manoar</title>
+</head>
+<body>
+    <div class="container">
+        <img src="manu.png" alt="No Images Found!" class="layer" data-speed="40">
+        <img src="manu.png" alt="No Images Found!" class="layer" data-speed="30">
+        <img src="manu.png" alt="No Images Found!" class="layer" data-speed="20">
+        <img src="manu.png" alt="No Images Found!" class="layer" data-speed="10">
+    </div>
+    <script>
+        document.addEventListener('mousemove', paralax);
+        function paralax(e){
+            this.querySelectorAll('.layer').forEach(layer => {
+                let speed = layer.getAttribute('data-speed');
+                let x = (window.innerWidth - e.pageX*speed)/250;
+                let y = (window.innerWidth - e.pageX*speed)/250;
+                layer.style.transform = `translate(${-x}px) translateY(${y}px)`; 
+            });
+        }
+    </script>
+</body>
+</html>

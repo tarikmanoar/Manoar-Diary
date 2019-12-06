@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(#2ad,#303030) ;
+    background-size: cover;
+}
+.container{
+    position: relative;
+    width: 292px;
+    height: 576px;
+    background: rgba(0, 0, 0, 0.2);
+    transform: rotate(-30deg) skew(25deg) scale(.8);
+}
+.container img{
+    position: absolute;
+    width: 100%;
+}
+.container img:nth-child(1){
+    opacity: 1;
+    z-index: 4;
+}
+.container img:nth-child(2){
+    opacity: .8;
+    z-index: 3;
+}
+.container img:nth-child(3){
+    opacity: .5;
+    z-index: 2;
+}
+.container img:nth-child(4){
+    opacity: .3;
+    z-index: 1;
+}
