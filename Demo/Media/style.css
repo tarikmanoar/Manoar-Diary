@@ -1,0 +1,25 @@
+*{margin: 0;padding: 0;}
+.audio {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+.video {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 10, 255);
+}
+.video video{
+    position: absolute;
+    height: 325px;
+    width: 760px;
+}
