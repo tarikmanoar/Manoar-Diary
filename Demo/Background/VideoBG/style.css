@@ -1,0 +1,57 @@
+*{margin: 0;padding: 0;}
+#vbg{
+    background:url('hack.jpg'),#1ad;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: -10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#vbg-overly{
+    position: absolute;
+    background: #1ad;
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+}
+
+#vbg span:nth-child(1){color:red;}
+#vbg span:nth-child(2){color:green;}
+#vbg span:nth-child(3){color:blue;}
+#vbg span:nth-child(4){color:pink;}
+#vbg span:nth-child(5){color:purple;}
+#vbg span:nth-child(6){color:yellow;}
+#vbg span:nth-child(7){color:lightblue;}
+#vbg span:nth-child(8){color:orange;}
+#vbg span:nth-child(9){color:lightseagreen;}
+#vbg span:nth-child(10){color:brown;}
+
+#video{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+#video video{
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+#vbg-overly-1{
+    position: absolute;
+    background: rgb(189, 4, 127);
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+}
