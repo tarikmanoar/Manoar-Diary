@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #555;
+}
+/* Selection colours (easy to forget) */
+
+::selection {
+    background: #2fd;
+}
+
+::-moz-selection {
+    background: rgb(255, 255, 158);
+}
+
+img::selection {
+    background: red;
+}
+
+img::-moz-selection {
+    background: transparent;
+}
+
+body {
+    -webkit-tap-highlight-color: rgb(255, 255, 158);
+}
+
+
+#responsive{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
