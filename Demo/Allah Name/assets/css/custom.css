@@ -1,7 +1,21 @@
 body{
-    background:url('../images/bg.jpg');
+    background:url('../images/bg1.jpg');
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
     color: #fff;
+}
+/* .content-inner h2{
+    margin-bottom: 0px !important;
+} */
+.content-inner img {
+    width: 200px;
+    margin-bottom: 10px;
+}
+.audioplay-object {
+    display: flex;
+    justify-content: center;
+}
+.bangla {
+    font-family: 'CharuChandan3D', sans-serif;
 }

@@ -12966,7 +12966,7 @@ section.content {
     left: 0;
     box-shadow: none;
     z-index: 10;
-    background: #292136;
+    background: #306c93;
 }
 
 @media only screen and (max-width: 767px) {
@@ -13076,7 +13076,8 @@ section.content {
 .sidebar .menu .list a {
     color: #fff;
     position: relative;
-    padding: 15px 10px
+    padding: 15px 10px;
+    border-bottom:3px solid #fff;
 }
 
 .sidebar .menu .list a:hover,
