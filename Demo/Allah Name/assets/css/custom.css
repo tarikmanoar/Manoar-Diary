@@ -5,6 +5,9 @@ body{
     background-size: cover;
     color: #fff;
 }
+::-webkit-scrollbar {
+    width: 0px;
+}
 /* .content-inner h2{
     margin-bottom: 0px !important;
 } */
