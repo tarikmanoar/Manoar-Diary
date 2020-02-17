@@ -11,7 +11,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    background: hotpink;
+    background: #232323;
 }
 /* .middle{
     position: absolute;
@@ -21,7 +21,7 @@
 } */
 .button button {
     background:none;
-    border: 5px solid #272727;
+    border: 5px solid #000000;
     font-size: 28px;
     padding: 15px 50px;
     border-radius: 5px;
@@ -64,7 +64,7 @@
     text-decoration: none;
     margin: 30px 0;
     padding: 10px 30px;
-    border: 2px solid rgb(133, 133, 134);
+    border: 2px solid rgb(124, 124, 126);
     background: rgb(75, 74, 74);
     overflow: hidden;
     text-transform: uppercase;
