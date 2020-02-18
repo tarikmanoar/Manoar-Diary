@@ -11051,7 +11051,8 @@ section.content {
 
 .ls-toggle-menu .sidebar .menu .list a {
     padding: 10px 0;
-    text-align: center
+    text-align: center;
+    border: none;
 }
 
 @media only screen and (max-width: 768px) {
