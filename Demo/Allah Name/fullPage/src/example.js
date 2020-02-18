@@ -32,3 +32,6 @@
 
     init();
 })();
+
+///custom
+$(document).ready(function () { $("#menu").hover(function () { console.log("Hello"), $.fn.fullpage.setMouseWheelScrolling(!1) }, function () { $.fn.fullpage.setMouseWheelScrolling(!0) }) })
