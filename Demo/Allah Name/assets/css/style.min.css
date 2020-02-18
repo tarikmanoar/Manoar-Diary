@@ -11007,14 +11007,14 @@ section.content {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     position: relative;
-    margin-left:260px;
+    margin-left: 260px;
     /* box-shadow: 0 0 16px rgba(41, 42, 51, 0.06), 0 6px 20px rgba(41, 42, 51, 0.02) */
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+
 }
 
 .ls-toggle-menu .slimScrollDiv {
@@ -11155,7 +11155,7 @@ section.content {
 
 @media only screen and (max-width: 767px) {
     .ls-closed section.content {
-        margin: 0
+        margin: 0 ;height: 100vh;
     }
 }
 
@@ -13078,7 +13078,7 @@ section.content {
     color: #fff;
     position: relative;
     padding: 15px 10px;
-    border-bottom:3px solid #fff;
+    border-bottom: 3px solid #fff;
 }
 
 .sidebar .menu .list a:hover,
