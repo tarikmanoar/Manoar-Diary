@@ -11,7 +11,9 @@
 }
 
 
-body{
+body {
+    /* cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto; */
+    cursor: url("../images/allah.png"), auto;
     background:url('../images/bg1.jpg');
     background-attachment: fixed;
     background-position: center center;

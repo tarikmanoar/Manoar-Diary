@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>API</title>
+</head>
+
+<body>
+
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    </script>
+    <script>
+var data = null;
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+if (this.readyState === this.DONE) {
+console.log(this.responseText);
+}
+});
+
+xhr.open("GET", "https://devru-latitude-longitude-find-v1.p.rapidapi.com/latlon.php?location=jessore");
+xhr.setRequestHeader("x-rapidapi-host", "devru-latitude-longitude-find-v1.p.rapidapi.com");
+xhr.setRequestHeader("x-rapidapi-key", "631447a53cmshbe6c6d261e9f38ap17ee4fjsn19c47cc5408e");
+
+xhr.send(data);
+    </script>
+</body>
+
+</html>

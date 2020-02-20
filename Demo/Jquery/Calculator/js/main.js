@@ -16,6 +16,8 @@ function mul(x) {
     }
 }
 function insrt(num) {
+    console.log($('.cal-dis').val());
+    
     $('.cal-dis').val($('.cal-dis').val() + num);
 }
 
