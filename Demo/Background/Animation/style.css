@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section#worker {
+    position: relative;
+    height: 100vh;
+    background: radial-gradient(#ff006a, #7b3956);
+}
+
+.shape-1 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid #e7f704;
+    left: 5%;
+    top: 25%;
+    animation: upndown 8s linear infinite;
+}
+
+.shape-2 {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid #0414f7;
+    background: royalblue;
+    left: 10%;
+    top: 10%;
+    animation: upndown 10s linear infinite;
+}
+
+.shape-3 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid #18f704;
+    right: 5%;
+    bottom: 25%;
+    animation: upndown 8s linear infinite;
+}
+
+.shape-4 {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid #04aaf7;
+    right: 10%;
+    bottom: 15%;
+    animation: upndown 4s linear infinite;
+}
+
+@keyframes upndown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.shape-5 {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: rgb(0, 255, 221);
+    /* border-radius: 50%; */
+    left: 25%;
+    top: 25%;
+    animation: r 5s linear infinite;
+}
+.shape-6 {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: rgb(142, 255, 240);
+    border-radius: 50%;
+    left: 26%;
+    top: 28%;
+    animation: rt 1s linear infinite;
+}
+
+@keyframes r {
+    100% {
+        margin-bottom: 100px;
+    }
+    75% {
+        margin-left: 100px;
+    }
+    50% {
+        margin-top: -100px;
+    }
+    0% {
+        margin-right: 100px;
+    }
+}
+@keyframes rt {
+    100% {
+        transform: scale(5);
+    }
+}
+
+.shape-7{
+    position: absolute;
+    opacity: .2;
+    width: 100%;
+    height: 100%;
+}
+.shape-7 img{
+    width: 100%;
+    height: 100%;
+}
