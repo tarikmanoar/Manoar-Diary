@@ -4,17 +4,77 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: url("https://pro-tv.com/wp-content/uploads/2018/04/islam-2376411_1920-e1522746730775.jpg") no-repeat fixed;
+            background-position: center center;
+            background-size: cover;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            font-size: 78px;
+        }
+
+        div#countdown {
+            background: #333;
+            padding: 30px 75px;
+            color: rgb(9, 133, 190);
+            border-radius: .5rem;
+            box-sizing: border-box;
+            box-shadow: 0px 7px 15px #5d5e5f;
+        }
+
+        span:nth-child(1) {
+            color: green;
+        }
+
+        span:nth-child(2) {
+            color: orange;
+        }
+
+        span:nth-child(3) {
+            color: yellow;
+        }
+
+        span:nth-child(4) {
+            color: hotpink;
+        }
+
         p {
             text-align: center;
             font-size: 60px;
             margin-top: 0px;
         }
+
+        .text {
+            position: absolute;
+            top: 10%;
+            color: #ddd;
+        }
     </style>
+    <title>Ramadan Countdown Timer</title>
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="text">
+            <h5>Ramadan Countdown</h5>
+        </div>
+        <div id="countdown">
+            <span id="d">00 </span>D
+            <span id="h">00 </span>H
+            <span id="m">00 </span>M
+            <span id="s">00 </span>S
+        </div>
+    </div>
     <p id="demo"></p>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <script>
         // Set the date we're counting down to
@@ -36,13 +96,15 @@
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Output the result in an element with id="demo"
-            document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
-                minutes + "m " + seconds + "s ";
+            document.getElementById("d").innerHTML = days;
+            document.getElementById("h").innerHTML = hours;
+            document.getElementById("m").innerHTML = minutes;
+            document.getElementById("s").innerHTML = seconds;
 
             // If the count down is over, write some text 
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
+                document.getElementById("countdown").innerHTML = "EXPIRED";
             }
         }, 1000);
     </script>
