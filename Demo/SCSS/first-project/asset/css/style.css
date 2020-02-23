@@ -8,6 +8,70 @@ body {
   padding: 0;
 }
 
+body ::-moz-selection {
+  background: orange;
+}
+
+body ::selection {
+  background: orange;
+}
+
+body #shape-1 {
+  position: absolute;
+  right: 10%;
+  top: 25%;
+  width: 50px;
+  height: 50px;
+  background: #0d86ae;
+  -webkit-clip-path: polygon(0 0, 0 0, 40% 50%, 0 100%, 0 100%, 49% 0, 100% 100%, 100% 100%, 61% 50%, 100% 0, 100% 0, 50% 100%);
+          clip-path: polygon(0 0, 0 0, 40% 50%, 0 100%, 0 100%, 49% 0, 100% 100%, 100% 100%, 61% 50%, 100% 0, 100% 0, 50% 100%);
+  -webkit-animation: star 8s linear infinite;
+          animation: star 8s linear infinite;
+}
+
+@-webkit-keyframes star {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes star {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+body #shape-2 {
+  position: absolute;
+  right: 6%;
+  top: 16%;
+  width: 70px;
+  height: 70px;
+  background: #1ed6cd;
+  -webkit-clip-path: polygon(0 0, 0 0, 40% 50%, 0 100%, 0 100%, 49% 0, 100% 100%, 100% 100%, 61% 50%, 100% 0, 100% 0, 50% 100%);
+          clip-path: polygon(0 0, 0 0, 40% 50%, 0 100%, 0 100%, 49% 0, 100% 100%, 100% 100%, 61% 50%, 100% 0, 100% 0, 50% 100%);
+  -webkit-animation: star 10s linear infinite;
+          animation: star 10s linear infinite;
+}
+
 body #bg {
   -webkit-clip-path: polygon(100% 0, 100% 80%, 51% 100%, 0 100%, 0 0);
           clip-path: polygon(100% 0, 100% 80%, 51% 100%, 0 100%, 0 0);
@@ -117,7 +181,7 @@ main section#primary p {
 }
 
 main section#primary a {
-  color: #063d4f;
+  color: #0d86ae;
   text-decoration: none;
   border-radius: 15px;
   text-transform: uppercase;

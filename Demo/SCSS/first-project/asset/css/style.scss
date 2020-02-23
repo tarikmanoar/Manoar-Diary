@@ -3,7 +3,7 @@ $borderes: 15px;
 $colors: (
   primary: rgb(17, 170, 221),
   primary-light: lighten(rgb(17, 170, 221), 30%),
-  primary-dark: darken(rgb(17, 170, 221), 30%),
+  primary-dark: darken(rgb(17, 170, 221), 10%),
   scoundary: rgb(30, 214, 205)
 );
 @function color($color-name) {
@@ -22,6 +22,40 @@ html {
   height: 100%;
 }
 body {
+    ::selection{
+        background: orange;
+    }
+  #shape-1 {
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    width: 50px;
+    height: 50px;
+    background: color(primary-dark);
+    clip-path: polygon(0 0, 0 0, 40% 50%, 0 100%, 0 100%, 49% 0, 100% 100%, 100% 100%, 61% 50%, 100% 0, 100% 0, 50% 100%);
+    animation: star 8s linear infinite;
+  @keyframes star {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(-150px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  }
+  #shape-2 {
+    position: absolute;
+    right: 6%;
+    top: 16%;
+    width: 70px;
+    height: 70px;
+    background: color(scoundary);
+    clip-path: polygon(0 0, 0 0, 40% 50%, 0 100%, 0 100%, 49% 0, 100% 100%, 100% 100%, 61% 50%, 100% 0, 100% 0, 50% 100%);
+    animation: star 10s linear infinite;
+  }
   margin: 0;
   padding: 0;
   #bg {
