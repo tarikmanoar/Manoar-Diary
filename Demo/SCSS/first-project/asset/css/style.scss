@@ -1,0 +1,127 @@
+$padding: 15px;
+$borderes: 15px;
+$colors: (
+  primary: rgb(17, 170, 221),
+  primary-light: lighten(rgb(17, 170, 221), 30%),
+  primary-dark: darken(rgb(17, 170, 221), 30%),
+  scoundary: rgb(30, 214, 205)
+);
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktop: 768px;
+@mixin desktop {
+  @media (min-width:#{$desktop}) {
+    @content;
+  }
+}
+
+body,
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  #bg {
+    clip-path: polygon(100% 0, 100% 80%, 51% 100%, 0 100%, 0 0);
+    background: color(primary);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+    @include desktop() {
+      clip-path: polygon(0 0, 68% 0, 49% 100%, 0% 100%);
+    }
+  }
+  header a {
+    color: #fff;
+    text-decoration: none;
+    padding: $padding;
+    display: block;
+    text-transform: uppercase;
+    @include desktop() {
+      margin-left: 50px;
+    }
+  }
+}
+main {
+  section#card {
+    background: #fff;
+    padding: 20px;
+    margin: 1em auto;
+    border-radius: $borderes;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    @include desktop() {
+      width: 35%;
+      margin-top: 10%;
+      margin-left: 45%;
+      position: absolute;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-bottom: 10px;
+        span {
+          position: absolute;
+          height: 30px;
+          width: 30px;
+          background: color(primary-light);
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        strong {
+          display: inline-block;
+          margin-left: max(40px);
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  section#primary {
+    color: #fff;
+    padding: $padding;
+    text-align: center;
+    @include desktop() {
+      position: absolute;
+      width: 35%;
+      margin-top: 10%;
+      margin-left: 50px;
+      text-align: left;
+    }
+    h1 {
+      font-size: 3em;
+      margin-top: -10px;
+      text-transform: uppercase;
+      @include desktop() {
+        font-size: 4em;
+        line-height: 0.9;
+      }
+    }
+    p {
+      font-size: 1.4em;
+    }
+    a {
+      color: color(primary-dark);
+      text-decoration: none;
+      border-radius: $borderes;
+      text-transform: uppercase;
+      font-weight: bold;
+      background: color(scoundary);
+      text-align: center;
+      margin: 50px auto 0 auto;
+      padding: $padding;
+      display: block;
+      @include desktop() {
+        display: inline-block;
+        padding: $padding $padding * 4;
+        margin: 0;
+      }
+    }
+  }
+}
