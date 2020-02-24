@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Multi File Upload</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+                <form method="POST" action="" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="file">Image</label>
+                        <input type="file" class="form-control" id="file" multiple>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div id="thumb-output"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#file').on('change', function () { //on file input change
+                if (window.File && window.FileReader && window.FileList && window.Blob) //check File API supported browser
+                {
+
+                    var data = $(this)[0].files; //this file data
+
+                    $.each(data, function (index, file) { //loop though each file
+                        if (/(\.|\/)(gif|jpe?g|png)$/i.test(file.type)) { //check supported file type
+                            var fRead = new FileReader(); //new filereader
+                            fRead.onload = (function (file) { //trigger function on successful read
+                                return function (e) {
+                                    var img = $('<img/>').addClass('thumb').attr('src', e.target.result); //create image element 
+                                    $('#thumb-output').append(img); //append image to output element
+                                };
+                            })(file);
+                            fRead.readAsDataURL(file); //URL representing the file's data.
+                        }
+                    });
+
+                } else {
+                    alert("Your browser doesn't support File API!"); //if File API is absent
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
