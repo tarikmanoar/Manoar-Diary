@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.imgBox1 {
+    position: relative;
+    overflow: hidden;
+    height: 219px;
+    width: 100%;
+}
+
+.image1 img{
+    transition: 1s linear;
+}
+.imgText1 {
+    color: rgb(0, 152, 172);
+    transition: 1s linear;
+    height: 219px;
+}
+
+.imgBox1:hover .imgText1 {
+    display: block;
+    transform: translateY(-219px);
+    background: #3a3a3acf;
+    padding: 30px;
+}
+
+.imgBox1:hover img {
+    transition: 1s linear;
+    transform: scale(2);
+}
