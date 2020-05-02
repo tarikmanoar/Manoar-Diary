@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide Password</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: #f9f9f9;
+
+        }
+
+        .inputBox {
+            position: relative;
+            width: 400px;
+            height: 60px;
+        }
+
+        .inputBox input {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            border: none;
+            background: transparent;
+            padding: 0px 20px;
+            font-size: 22px;
+            box-shadow: -4px -4px 10px rgba(255, 255, 255,1),
+                        inset 4px 4px 10px rgba(0, 0, 0,.05),
+                        inset -4px -4px 10px rgba(255, 255, 255,1),
+                        4px 4px 10px rgba(0, 0, 0,.05);
+            outline: none;
+            box-sizing: border-box;
+        }
+        .inputBox input::placeholder {
+            color: aqua;
+        }
+        #toggle{
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            background: rgb(2, 153, 35);
+            background-size: cover;
+            cursor: pointer;
+            right: 20px;
+            transform: translateY(-50%);
+            border-radius: 50%;
+        }
+        
+        #toggle.hide{
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inputBox">
+        <input type="password" name="pass" id="pass" placeholder="Enter Password">
+        <div id="toggle" onclick="showHide()"></div>
+    </div> <br>
+    <div class="inputBox">
+        <input type="password" name="pass" id="pass" placeholder="Enter Password">
+        <div id="toggle" onclick="showHide()"></div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script>
+        const pass = document.getElementById('pass');
+        const toggle = document.getElementById('toggle');
+        function showHide(){
+            if(pass.type === 'password'){
+                pass.setAttribute('type','text');
+                toggle.classList.add('hide');
+            }else{
+                
+                pass.setAttribute('type','password');
+                toggle.classList.remove('hide');
+            }
+        }
+    </script>
+</body>
+
+</html>
