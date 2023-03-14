@@ -1,4 +1,4 @@
-<p align="center"><img src="https://iamrasel.com/wp-content/uploads/2018/12/med-badr-chemmaoui-630239-unsplash.jpg" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Chanzhaoyu/chatgpt-web/main/src/assets/avatar.jpg" width="400"></p>
 
 
 [![GitHub issues](https://img.shields.io/github/issues/tarikmanoar/Manoar-Dairy?style=flat-square)](https://github.com/tarikmanoar/Manoar-Dairy/issues)
