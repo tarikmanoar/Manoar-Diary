@@ -6,6 +6,6 @@
 [![GitHub stars](https://img.shields.io/github/stars/tarikmanoar/Manoar-Dairy?style=flat-square)](https://github.com/tarikmanoar/Manoar-Dairy/stargazers)
 [![GitHub license](https://img.shields.io/github/license/tarikmanoar/Manoar-Dairy?style=flat-square)](https://github.com/tarikmanoar/Manoar-Dairy/blob/master/LICENSE)
 
-## MANOAR diary
+# MANOAR diary
 
 <a href='/3D-cube-video.md'>How to Make 3D cude video </a>
